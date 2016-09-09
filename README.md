@@ -1,9 +1,8 @@
-# Sample MVC5 application
+# Sample .NET MVC application
 
-This is a sample web application written on Microsoft .NET Framework 4.5.1. It represents a customer database and the related user interface for
-adding, editing, viewing, searching and deleting customers. Any comments or suggestions are welcome.
+This is a sample web application written on Microsoft .NET Framework 4.5.1. It represents a customer database and the related user interface for adding, editing, viewing, searching and deleting customers. Any comments or suggestions are welcome.
 
-## Bult with 
+## Bult with: 
 
 *  MVC5 (.NET Framework 4.5.1) 
 *  Entity Framework
