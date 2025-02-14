@@ -4,16 +4,16 @@ pipeline {
     stages {
         stage('Checkout Repository') {
             steps {
-            git branch: 'master', url: 'https://github.com/safikawtahar/pipline_dotnet.git'
+                git branch: 'master', url: 'https://github.com/safikawtahar/pipline_dotnet.git'
             }
         }
 
         stage('Run Ansible Playbook') {
             steps {
-ansiblePlaybook installation: 'Ansible_1', 
-                                inventory: 'ansible/inventory.ini', 
-                                playbook: 'ansible/playbook.yml', 
-                                vaultTmpPath: ''
+                // Exécuter Ansible via WSL
+                bat '''
+                    wsl ansible-playbook -i ansible/inventory.ini ansible/playbook.yml
+                '''
             }
         }
     }
