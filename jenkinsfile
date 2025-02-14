@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Run Ansible Playbook') {
             steps {
-                sh 'ansible-playbook -i inventory.ini playbook.yml'
-            }
+ansiblePlaybook installation: 'Ansible_1', inventory: 'ansible/inventory.ini', playbook: 'ansible/playbook.yml', vaultTmpPath: ''            }
         }
     }
 }
