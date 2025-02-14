@@ -10,10 +10,11 @@ pipeline {
 
         stage('Run Ansible Playbook') {
             steps {
-                // Exécuter Ansible via WSL
-                bat '''
-                    wsl ansible-playbook -i ansible/inventory.ini ansible/playbook.yml
-                '''
+                // Utiliser le plugin Ansible
+                ansiblePlaybook installation: 'Ansible_1', 
+                                inventory: 'ansible/inventory.ini', 
+                                playbook: 'ansible/playbook.yml', 
+                                vaultTmpPath: ''
             }
         }
     }
