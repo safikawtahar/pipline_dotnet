@@ -11,9 +11,10 @@ pipeline {
         stage('Run Ansible Playbook') {
             steps {
                 // Exécuter le script shell via WSL
-                bat '''
-                    wsl /mnt/c/Users/DELL/.jenkins/workspace/ansible-pipline/run_ansible.sh
-                '''
+               bat '''
+    wsl ansible-playbook -i /mnt/c/Users/DELL/.jenkins/workspace/ansible-pipline/ansible/inventory.ini /mnt/c/Users/DELL/.jenkins/workspace/ansible-pipline/ansible/playbook.yml
+'''
+
             }
         }
     }
